@@ -64,6 +64,9 @@ h1 {
     background-color: #03dac6;
     border-radius: 50%;
     cursor: pointer;
+    box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 
+                0px 2px 2px 0px rgba(0,0,0,0.14), 
+                0px 1px 5px 0px rgba(0,0,0,0.12);
     transition: transform 0.3s ease-in-out;
 }
 
@@ -83,7 +86,7 @@ h1 {
 
 .item_title{
    min-width: 100%;
-   font-size: 20px;
+   font-size: 1rem;
    font-weight: 700;
 }
 
@@ -91,7 +94,10 @@ h1 {
     min-width: 100%;
     object-fit: cover;
     border-radius: 2rem;
- }
+    box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 
+                0px 2px 2px 0px rgba(0,0,0,0.14), 
+                0px 1px 5px 0px rgba(0,0,0,0.12);
+}
 
 
 .button_holder:has(#item1:checked)~.slider_holder .slider_carousel,
@@ -117,4 +123,22 @@ h1 {
 .button_holder:has(#item5:checked)~.slider_holder .slider_carousel,
 .button_holder:has(#item5:checked)~.text_holder .text_carousel {
     transform: translateX(-400%);
+}
+
+@media (max-width: 767px){
+.button_holder {
+    order: 2;
+    max-width: 100%;
+    justify-content: center;
+}
+.text_holder {
+    order: 3;
+    max-width: 100%;
+}
+.container {
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto 2rem;
+    overflow: hidden;
+}
 }
