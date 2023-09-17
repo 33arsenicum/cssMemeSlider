@@ -3,62 +3,111 @@
     max-width: 50rem;
     margin: 0 auto;
     overflow: hidden;
-  }
-  
-  .button_holder,
-  .text_holder,
-  .slider_holder {
-    width: 100%;
-  }
-  
-  .button {
-    display: none;
-  }
-  
-  .label {
-    display: inline-block;
-    width: 1rem;
-    height: 1rem;
-    background-color: #03dac6;
-    border-radius: 50%;
-    cursor:pointer;
-    transition: transform 0.3s ease-in-out;
-  }
+}
 
-  .label:hover {
-    background-color: #00b5a4;
-  }
-  
-  .button:checked + .label {
-    background-color: #018786;
-  }
-  
-  .text_carousel,
-  .slider_carousel {
+.button_holder,
+.text_holder,
+.slider_holder {
+    width: 100%;
+}
+
+.content_holder {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.slider_holder {
+    order: 1;
+}
+
+.text_holder {
+    order: 2;
+    max-width: 50%;
+    overflow: hidden;
+}
+
+.button_holder {
+    order: 3;
+    display: flex;
+    max-width: 50%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.text_carousel {
     display: flex;
     transition: transform 0.3s ease-in-out;
   }
-  
-  .item_title,
-  .slider_item {
-    width: 100%;
-  }
-  
-  .button_holder:has(#item1:checked) ~ .slider_holder .slider_carousel {
+
+.button {
+    display: none;
+}
+
+.label {
+    display: inline-block;
+    width: 1.3rem;
+    height: 1.3rem;
+    margin: 0.5rem;
+    background-color: #03dac6;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.label:hover {
+    background-color: #00b5a4;
+}
+
+.button:checked+.label {
+    background-color: #018786;
+}
+
+.text_carousel,
+.slider_carousel {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.item_title,
+.slider_item {
+   min-width: 100%;
+}
+
+.button_holder:has(#item1:checked)~.slider_holder .slider_carousel {
     transform: translateX(0);
-  }
-  
-  .button_holder:has(#item2:checked) ~ .slider_holder .slider_carousel {
+}
+
+.button_holder:has(#item2:checked)~.slider_holder .slider_carousel {
     transform: translateX(-100%);
-  }
-  
-  .button_holder:has(#item3:checked) ~ .slider_holder .slider_carousel {
+}
+
+.button_holder:has(#item3:checked)~.slider_holder .slider_carousel {
     transform: translateX(-200%);
-  }
-  
-  .button_holder:has(#item4:checked) ~ .slider_holder .slider_carousel {
+}
+
+.button_holder:has(#item4:checked)~.slider_holder .slider_carousel {
     transform: translateX(-300%);
-  }
-  .button_holder:has(#item5:checked) ~ .slider_holder .slider_carousel {
+}
+
+.button_holder:has(#item5:checked)~.slider_holder .slider_carousel {
     transform: translateX(-400%);
-  }
+}
+
+.button_holder:has(#item1:checked)~.text_holder .text_carousel {
+    transform: translateX(0);
+}
+
+.button_holder:has(#item2:checked)~.text_holder .text_carousel {
+    transform: translateX(calc(-100% + 0.1rem));
+}
+
+.button_holder:has(#item3:checked)~.text_holder .text_carousel {
+    transform: translateX(calc(-200%));
+}
+
+.button_holder:has(#item4:checked)~.text_holder .text_carousel {
+    transform: translateX(calc(-300%));
+}
+.button_holder:has(#item5:checked)~.text_holder .text_carousel {
+    transform: translateX(calc(-400%));
+}
