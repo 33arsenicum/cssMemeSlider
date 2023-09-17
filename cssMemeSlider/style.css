@@ -12,6 +12,7 @@
 }
 
 .content_holder {
+    row-gap: 1rem;
     display: flex;
     flex-wrap: wrap;
 }
@@ -24,6 +25,8 @@
     order: 2;
     max-width: 50%;
     overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 
 .button_holder {
@@ -68,46 +71,36 @@
     transition: transform 0.3s ease-in-out;
 }
 
-.item_title,
-.slider_item {
+.item_title{
    min-width: 100%;
 }
 
-.button_holder:has(#item1:checked)~.slider_holder .slider_carousel {
-    transform: translateX(0);
-}
+.slider_item {
+    min-width: 100%;
+    object-fit: cover;
+ }
 
-.button_holder:has(#item2:checked)~.slider_holder .slider_carousel {
-    transform: translateX(-100%);
-}
-
-.button_holder:has(#item3:checked)~.slider_holder .slider_carousel {
-    transform: translateX(-200%);
-}
-
-.button_holder:has(#item4:checked)~.slider_holder .slider_carousel {
-    transform: translateX(-300%);
-}
-
-.button_holder:has(#item5:checked)~.slider_holder .slider_carousel {
-    transform: translateX(-400%);
-}
-
+.button_holder:has(#item1:checked)~.slider_holder .slider_carousel,
 .button_holder:has(#item1:checked)~.text_holder .text_carousel {
     transform: translateX(0);
 }
 
+.button_holder:has(#item2:checked)~.slider_holder .slider_carousel,
 .button_holder:has(#item2:checked)~.text_holder .text_carousel {
-    transform: translateX(calc(-100% + 0.1rem));
+    transform: translateX(-100%);
 }
 
+.button_holder:has(#item3:checked)~.slider_holder .slider_carousel,
 .button_holder:has(#item3:checked)~.text_holder .text_carousel {
-    transform: translateX(calc(-200%));
+    transform: translateX(-200%);
 }
 
+.button_holder:has(#item4:checked)~.slider_holder .slider_carousel,
 .button_holder:has(#item4:checked)~.text_holder .text_carousel {
-    transform: translateX(calc(-300%));
+    transform: translateX(-300%);
 }
+
+.button_holder:has(#item5:checked)~.slider_holder .slider_carousel,
 .button_holder:has(#item5:checked)~.text_holder .text_carousel {
-    transform: translateX(calc(-400%));
+    transform: translateX(-400%);
 }
