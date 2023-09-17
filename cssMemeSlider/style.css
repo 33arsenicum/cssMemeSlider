@@ -1,8 +1,18 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #373737;
+    color: #fff;
+}
+
 .container {
     width: 100%;
     max-width: 50rem;
     margin: 0 auto;
     overflow: hidden;
+}
+
+h1 {
+    text-align: center;
 }
 
 .button_holder,
@@ -73,12 +83,16 @@
 
 .item_title{
    min-width: 100%;
+   font-size: 20px;
+   font-weight: 700;
 }
 
 .slider_item {
     min-width: 100%;
     object-fit: cover;
+    border-radius: 2rem;
  }
+
 
 .button_holder:has(#item1:checked)~.slider_holder .slider_carousel,
 .button_holder:has(#item1:checked)~.text_holder .text_carousel {
