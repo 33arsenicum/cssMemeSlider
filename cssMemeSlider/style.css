@@ -14,8 +14,7 @@ main {
 }
 
 .container {
-    width: 100%;
-    max-width: 50rem;
+    max-width: 40rem;
     margin: 0 auto 2rem;
     overflow: hidden;
 }
@@ -179,6 +178,12 @@ footer .section a:hover svg {
 }
 
 @media (max-width: 767px) {
+    .container {
+        max-width: 50rem;
+        margin: 0 auto 2rem;
+        overflow: hidden;
+    }
+
     .button_holder {
         order: 2;
         max-width: 100%;
